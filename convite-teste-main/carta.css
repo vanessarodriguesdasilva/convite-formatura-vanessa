@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("teste.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* ==================== IMAGEM EMBAIXO DA CARTA ==================== */
+.info2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 5%;
+    right: 3%;
+    z-index: 7;
+    top: 70%;
+}
+
+.info2 img {
+    width: 30%; /* ajuste fino */
+    height: auto;
+}
+
+/* ==================== IMAGEM NA DIREITA EM CIMA ==================== */
+.info1 {
+    align-items: flex-end;
+    justify-content: flex-end;    
+    position: absolute;
+    display: flex;
+    top: 5%;
+    right: 3%;
+    z-index: 7;
+}
+
+.info1 img {
+    width: 35%;
+    height: auto;
+}
+
+/* ==================== AJUSTES PARA CELULAR ====================*/
+@media (max-width: 900px) {
+
+    .info1 img {
+        width: 70%; 
+    }
+
+    .info2 {
+        top: 55%;
+        right: 2%;
+    }
+
+    .info2 img {
+        width: 70%; 
+    }
+}
+
+.carta {
+    position: absolute; 
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120%;
+    transition: 0.3s;
+}
+
+.carta:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.carta img {
+    max-width: 60%;
+    height: auto;
+    z-index: 6;
+}
+
+
+.carta img {
+    display: block;
+    z-index: 6;
+    max-width: 60%;
+    height: auto;
+}
+
+/* ==================== FUNDO BRILHOS ==================== */
+.fundo-brilho img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+@media (max-width: 900px) {
+
+    html, body {
+        overflow-x: hidden !important;
+    }
+
+    .carta{
+        left: 45%;
+    }
+
+    .carta img {
+        max-width: 115%;
+        width: 115%;
+    }
+
+    .carta:hover {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .fundo-brilho img {
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+
+
+
